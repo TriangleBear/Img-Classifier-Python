@@ -63,8 +63,7 @@ def perform_object_detection(image_path):
                 class_label = classes[class_id]
 
                 # Check if the class label is a living thing, vehicle, or plant
-                if class_label in living_thing_classes or class_label in vehicle_classes or class_label in plant_classes:
-                    # Get the bounding box coordinates
+                if class_label in living_thing_classes or class_label in vehicle_classes or class_label in plant_classes:                   # Get the bounding box coordinates
                     center_x = int(detection[0] * desired_width)
                     center_y = int(detection[1] * desired_height)
                     bbox_width = int(detection[2] * desired_width)
